@@ -13,8 +13,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: pnpm
-          cache-dependency-path: package.json
       - run: corepack enable
       - run: corepack prepare pnpm@8 --activate
       - run: pnpm install
