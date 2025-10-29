@@ -1,39 +1,62 @@
-# Best Life Blog Utilities
+# Best Life Official
 
-This repository contains a small static helper page that can generate the
-correct GitHub "Create Pull Request" link for any repository. It verifies that
-the repository and both branches exist before redirecting to GitHub. This helps
-avoid the generic "GitHub resource not found" error message that appears when a
-branch or repository name is incorrect.
+Evidence-based health & nutrition made simple. This project is a Next.js 14 App Router site with TypeScript, Tailwind CSS, and MDX-powered content.
 
-## Development
-
-The site is a static bundle served from `index.html`. You can open the file
-directly in a browser or use any static HTTP server.
+## Getting started
 
 ```bash
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then navigate to <http://localhost:8000/>.
+Visit `http://localhost:3000` to explore the site.
+
+## Project structure
+
+- `app/` – App Router pages, API routes, calculators, and legal pages.
+- `components/` – UI primitives, MDX shortcodes, recipe experiences, and calculator widgets.
+- `content/` – MDX files for blog posts and recipes with frontmatter metadata.
+- `lib/` – Utility modules for MDX loading, content queries, SEO helpers, and calculator math.
+- `public/` – Static assets including fonts and default OG image.
+
+## Content authoring
+
+### Blog posts
+
+Create a new `.mdx` file in `content/posts` with frontmatter:
+
+```mdx
+---
+title: "Title"
+description: "Short summary"
+date: YYYY-MM-DD
+author: "Author Name"
+tags: ["tag-a", "tag-b"]
+cover: ""
+---
+```
+
+Use the shortcodes `<Callout>`, `<ProsCons>`, `<Note>`, `<Quote>`, `<NutritionTable>`, and `<NutritionFacts>` to enhance storytelling.
+
+### Recipes
+
+Add `.mdx` files to `content/recipes` with frontmatter mirroring the sample recipes. Include nutrition facts, instructions, and optional imagery.
+
+## Filters & search
+
+- Blog index: server-side search across titles/descriptions, tag filters, and pagination.
+- Recipe library: client-side filtering by tag, meal type, diet, cuisine, prep time, and calories with instant search.
+
+## Environment variables
+
+- `CONTACT_WEBHOOK_URL` (optional): URL to forward validated contact form submissions.
+- `NEXT_PUBLIC_SITE_URL` (optional): provide if you reference the canonical URL client-side.
+
+## Calculators
+
+- BMI, TDEE, and Macro calculators support metric/imperial toggles and shareable URLs via query parameters.
+- Mathematical helpers live in `lib/units.ts` and `lib/tdee.ts`.
 
 ## Deployment
 
-The page is completely static, so you can deploy the repository with any static
-hosting solution (GitHub Pages, Netlify Drop, Vercel static hosting, etc.).
-
-## Project Structure
-
-- `index.html` – the main markup for the helper page.
-- `styles.css` – styling for the layout.
-- `script.js` – validation and redirect logic for generating pull request links.
-
-## Usage
-
-1. Enter the GitHub repository owner and name (for example: `bestlifeofficial/blog`).
-2. Provide the base branch (usually `main`) and the head branch (the branch you
-   want to merge).
-3. Click **Create Pull Request**.
-4. If the repository and branches exist, the page redirects you to GitHub's PR
-   creation screen. If not, it displays a helpful error message explaining what
-   went wrong so you can fix the information before retrying.
+Deploy to Vercel (Node 20). The included GitHub Action runs `npm install`, `npm run typecheck`, `npm run lint`, and `npm run build` to mirror production checks.
