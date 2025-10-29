@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Protein guide illustration</title>
+  <desc id="desc">Abstract display of protein-rich foods including legumes, eggs, and fish in a modern style.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ecfeff" />
+      <stop offset="100%" stop-color="#d1fae5" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" rx="48" />
+  <g opacity="0.18" fill="#0f766e">
+    <circle cx="200" cy="200" r="160" />
+    <circle cx="980" cy="580" r="200" />
+  </g>
+  <g transform="translate(320 200)">
+    <ellipse cx="160" cy="320" rx="160" ry="70" fill="#064e3b" opacity="0.15" />
+    <path d="M60 140c0-44 48-80 140-80s140 36 140 80-48 80-140 80S60 184 60 140Z" fill="#0ea5e9" />
+    <path d="M110 100c0-28 28-50 90-50s90 22 90 50-28 50-90 50-90-22-90-50Z" fill="#22d3ee" />
+    <ellipse cx="200" cy="96" rx="36" ry="28" fill="#fef08a" />
+    <ellipse cx="150" cy="110" rx="28" ry="22" fill="#facc15" />
+    <ellipse cx="250" cy="110" rx="28" ry="22" fill="#facc15" />
+    <path d="M118 136c28 16 116 16 144 0" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round" opacity="0.2" />
+  </g>
+  <g transform="translate(640 260)">
+    <rect x="60" y="0" width="260" height="220" rx="32" fill="#fef3c7" />
+    <rect x="90" y="30" width="200" height="140" rx="28" fill="#fbbf24" />
+    <circle cx="190" cy="100" r="46" fill="#fde68a" />
+    <path d="M130 170c46 24 124 24 170 0" fill="none" stroke="#b45309" stroke-width="10" stroke-linecap="round" opacity="0.4" />
+  </g>
+  <g transform="translate(420 480)" fill="#34d399">
+    <ellipse cx="0" cy="0" rx="70" ry="24" transform="rotate(-12)" />
+    <ellipse cx="120" cy="20" rx="60" ry="22" transform="rotate(8)" />
+    <ellipse cx="220" cy="0" rx="68" ry="26" transform="rotate(-6)" />
+  </g>
+</svg>
