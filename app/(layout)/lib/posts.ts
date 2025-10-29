@@ -50,7 +50,6 @@ export const getPostBySlug = cache(async (slug: string) => {
   const frontmatter = data as PostFrontmatter;
   const mdx = await compileMDX<{ frontmatter: PostFrontmatter }>({
     source,
-    components: useMDXComponents({}),
     options: {
       parseFrontmatter: true,
       mdxOptions: {
