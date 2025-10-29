@@ -14,25 +14,23 @@ export const BlogFilterControls = ({ tags }: BlogFilterControlsProps) => {
   const [query, setQuery] = useState(searchParams.get('query') ?? '');
   const [selectedTag, setSelectedTag] = useState(searchParams.get('tag') ?? '');
   const [isReady, setIsReady] = useState(false);
-  const [hasUserInteracted, setHasUserInteracted] = useState(false);
   const [, startTransition] = useTransition();
 
   useEffect(() => {
     setQuery(searchParams.get('query') ?? '');
     setSelectedTag(searchParams.get('tag') ?? '');
     setIsReady(true);
-    setHasUserInteracted(false);
   }, [searchParams]);
 
   useEffect(() => {
-    if (!isReady || !hasUserInteracted) return;
+    if (!isReady) return;
     const handler = setTimeout(() => {
       updateParams(query, selectedTag, 1);
     }, 300);
 
     return () => clearTimeout(handler);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query, isReady, hasUserInteracted]);
+  }, [query, isReady]);
 
   const updateParams = (nextQuery: string, nextTag: string, page: number) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -63,10 +61,7 @@ export const BlogFilterControls = ({ tags }: BlogFilterControlsProps) => {
         <span className="sr-only">Search posts</span>
         <input
           value={query}
-          onChange={(event) => {
-            setHasUserInteracted(true);
-            setQuery(event.target.value);
-          }}
+          onChange={(event) => setQuery(event.target.value)}
           type="search"
           placeholder="Search articles..."
           className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm shadow-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50"

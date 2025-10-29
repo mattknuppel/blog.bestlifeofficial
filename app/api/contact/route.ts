@@ -22,28 +22,11 @@ export async function POST(request: Request) {
     };
 
     if (process.env.CONTACT_WEBHOOK_URL) {
-      const response = await fetch(process.env.CONTACT_WEBHOOK_URL, {
+      await fetch(process.env.CONTACT_WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-
-      if (!response.ok) {
-        const errorText = await response.text().catch(() => '');
-        console.error('Contact webhook error', {
-          status: response.status,
-          statusText: response.statusText,
-          body: errorText,
-        });
-
-        return NextResponse.json(
-          {
-            success: false,
-            message: 'We could not send your message right now. Please try again later.',
-          },
-          { status: 502 },
-        );
-      }
     } else {
       console.info('Contact submission', payload);
     }
