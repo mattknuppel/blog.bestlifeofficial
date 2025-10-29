@@ -1,0 +1,41 @@
+{
+  "name": "best-life-official",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "npm@10",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.12",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "gray-matter": "^4.0.3",
+    "next": "14.2.8",
+    "next-mdx-remote": "^5.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "reading-time": "^1.5.0",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.1.0",
+    "remark-gfm": "^4.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.2.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.10.0",
+    "eslint-config-next": "^14.2.8",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.3"
+  }
+}
