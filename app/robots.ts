@@ -1,9 +1,15 @@
-import type { MetadataRoute } from "next";
-import config from "@/config";
+import type { MetadataRoute } from 'next';
+
+import { siteConfig } from '@/lib/site';
+
+const baseUrl = siteConfig.url.replace(/\/$/, '');
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: "*" }],
-    sitemap: `${config.url}/sitemap.xml`
+    rules: {
+      userAgent: '*',
+      allow: '/',
+    },
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

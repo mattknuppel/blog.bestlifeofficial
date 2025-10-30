@@ -1,0 +1,11 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16A34A" />
+      <stop offset="100%" stop-color="#4ADE80" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="url(#grad4)" />
+  <text x="80" y="200" font-size="72" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" fill="#052E16">Moroccan Lentil Stew</text>
+  <text x="80" y="320" font-size="40" font-family="'Inter', 'Segoe UI', sans-serif" fill="#052E16">Smoky spices • Greens • Lemon</text>
+</svg>

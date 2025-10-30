@@ -3,42 +3,42 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
+  --background: 255 255 255;
+  --foreground: 17 24 39;
+  --muted: 249 250 251;
+  --muted-foreground: 107 114 128;
+  --brand: 30 144 255;
 }
 
-html {
-  scroll-behavior: smooth;
+.dark {
+  color-scheme: dark;
+  --background: 17 24 39;
+  --foreground: 243 244 246;
+  --muted: 31 41 55;
+  --muted-foreground: 156 163 175;
 }
 
 body {
-  @apply bg-ink-50 text-ink-900 font-sans antialiased;
+  @apply min-h-screen bg-[rgb(var(--background))] text-[rgb(var(--foreground))];
 }
 
 a {
-  @apply text-emerald-600 hover:text-emerald-700 transition-colors;
-}
-
-.prose a {
-  @apply font-semibold underline decoration-emerald-400 hover:decoration-emerald-600;
-}
-
-.focus-ring {
-  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500;
-}
-
-.skip-link {
-  @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-emerald-700 focus:shadow-lg;
+  @apply text-brand underline-offset-4 transition hover:text-brand-dark;
 }
 
 main {
-  min-height: 60vh;
+  @apply min-h-[60vh];
 }
 
-@media print {
-  header,
-  footer,
-  nav,
-  .no-print {
-    display: none !important;
-  }
+.text-muted-foreground {
+  color: rgb(var(--muted-foreground));
+}
+
+.bg-muted {
+  background-color: rgb(var(--muted));
+}
+
+.prose :where(h2, h3) {
+  @apply scroll-mt-24;
 }

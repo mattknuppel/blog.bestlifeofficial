@@ -1,10 +1,21 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import { withContentlayer } from 'next-contentlayer';
 
-const nextConfig: NextConfig = {
+const rawBasePath = process.env.BASE_PATH?.trim();
+const normalizedBasePath = rawBasePath && rawBasePath !== '/'
+  ? `/${rawBasePath.replace(/^\/+|\/+$/g, '')}`
+  : '';
+
+const config: NextConfig = {
+  output: 'export',
+  basePath: normalizedBasePath || undefined,
+  assetPrefix: normalizedBasePath || undefined,
+  images: {
+    unoptimized: true,
+  },
   experimental: {
     typedRoutes: true,
-    serverActions: true
-  }
+  },
 };
 
-export default nextConfig;
+export default withContentlayer(config);
