@@ -1,0 +1,11 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="url(#grad5)" />
+  <text x="80" y="200" font-size="72" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" fill="#FFE4E6">Spiced Veggie Tacos</text>
+  <text x="80" y="320" font-size="40" font-family="'Inter', 'Segoe UI', sans-serif" fill="#FFE4E6">Black beans • Slaw • Avocado crema</text>
+</svg>

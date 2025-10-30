@@ -1,41 +1,50 @@
 {
-  "name": "best-life-official",
-  "private": true,
+  "name": "bestlife-nutrition",
   "version": "1.0.0",
+  "private": true,
   "packageManager": "npm@10",
   "engines": {
-    "node": ">=20"
+    "node": "^20"
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && next export && node scripts/generate-og.mjs",
+    "start": "serve out",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "test": "vitest",
+    "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.12",
+    "@resvg/resvg-js": "^2.6.1",
+    "autoprefixer": "^10.4.20",
     "clsx": "^2.1.1",
-    "date-fns": "^3.6.0",
+    "contentlayer": "^0.3.4",
     "gray-matter": "^4.0.3",
-    "next": "14.2.8",
-    "next-mdx-remote": "^5.0.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "reading-time": "^1.5.0",
-    "rehype-autolink-headings": "^7.1.0",
-    "rehype-slug": "^6.1.0",
-    "remark-gfm": "^4.0.0",
-    "zod": "^3.23.8"
+    "mdx-bundler": "^10.0.2",
+    "next": "14.x",
+    "next-contentlayer": "^0.3.4",
+    "postcss": "^8.4.47",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "satori": "^0.11.0",
+    "serve": "^14.2.3",
+    "tailwindcss": "^3.4.13",
+    "zod": "^3.23.8",
+    "@tailwindcss/typography": "^0.5.12",
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^16.0.1",
     "@types/node": "^22.7.4",
-    "@types/react": "^18.2.0",
-    "autoprefixer": "^10.4.20",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
     "eslint": "^9.10.0",
-    "eslint-config-next": "^14.2.8",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.3"
+    "eslint-config-next": "^14.2.11",
+    "jsdom": "^24.1.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.2",
+    "@vitejs/plugin-react": "^4.3.1"
   }
 }
