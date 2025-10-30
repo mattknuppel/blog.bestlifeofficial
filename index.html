@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshFuel Nutrition</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <h1>FreshFuel Nutrition</h1>
+      <p>Simple guidance to nourish your body and feel your best.</p>
+      <a class="btn" href="#plan">Explore Meal Plans</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="section__intro">
+        <h2>Balanced Eating Made Easy</h2>
+        <p>
+          We break down nutrition into easy steps so you can build lasting habits.
+          Discover colorful plates, mindful hydration, and weekly meal plans tailored
+          to your lifestyle.
+        </p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Whole Foods First</h3>
+          <p>
+            Fill your plate with fruits, vegetables, whole grains, and lean proteins to
+            support energy, recovery, and overall wellness.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Hydrate Daily</h3>
+          <p>
+            Aim for 8 cups of water a day. Flavor it with citrus slices, mint, or berries for
+            a refreshing twist.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Mindful Balance</h3>
+          <p>
+            Enjoy treats in moderation and listen to your hunger cues to build a positive
+            relationship with food.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="plan">
+      <div class="section__intro">
+        <h2>Weekly Meal Plan Snapshot</h2>
+        <p>A simple outline to keep you fueled all week long.</p>
+      </div>
+      <div class="plan">
+        <div class="plan__day">
+          <h4>Monday</h4>
+          <ul>
+            <li>Breakfast: Greek yogurt parfait with berries</li>
+            <li>Lunch: Quinoa bowl with roasted veggies</li>
+            <li>Dinner: Baked salmon with asparagus</li>
+          </ul>
+        </div>
+        <div class="plan__day">
+          <h4>Wednesday</h4>
+          <ul>
+            <li>Breakfast: Veggie omelet with whole-grain toast</li>
+            <li>Lunch: Lentil soup and side salad</li>
+            <li>Dinner: Chicken stir-fry with brown rice</li>
+          </ul>
+        </div>
+        <div class="plan__day">
+          <h4>Friday</h4>
+          <ul>
+            <li>Breakfast: Overnight oats with chia seeds</li>
+            <li>Lunch: Hummus wrap with crunchy veggies</li>
+            <li>Dinner: Veggie-loaded turkey tacos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tips">
+      <div class="section__intro">
+        <h2>Smart Snacking Tips</h2>
+        <p>Keep these nourishing snack ideas on hand for busy days:</p>
+      </div>
+      <ul class="tips">
+        <li>Apple slices with almond butter</li>
+        <li>Carrot sticks with hummus</li>
+        <li>Trail mix made with nuts, seeds, and dried fruit</li>
+        <li>Cottage cheese with pineapple</li>
+        <li>Dark chocolate and strawberries</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> FreshFuel Nutrition. Eat well, live well.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
