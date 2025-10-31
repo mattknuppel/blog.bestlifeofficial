@@ -390,3 +390,103 @@ main {
     letter-spacing: 0.16em;
   }
 }
+
+.hero--gelatin {
+  background: linear-gradient(rgba(20, 33, 61, 0.78), rgba(20, 33, 61, 0.78)),
+    url("https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?auto=format&fit=crop&w=1600&q=80")
+      center/cover no-repeat;
+}
+
+.landing {
+  padding-top: 3rem;
+}
+
+.benefit-grid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.benefit {
+  background: var(--surface);
+  padding: 1.9rem;
+  border-radius: 18px;
+  box-shadow: 0 28px 60px rgba(20, 33, 61, 0.08);
+}
+
+.benefit h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+
+.disclaimer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.recipe-grid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.recipe {
+  background: var(--surface);
+  padding: 1.9rem;
+  border-radius: 18px;
+  box-shadow: 0 28px 60px rgba(20, 33, 61, 0.08);
+}
+
+.recipe h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+
+.recipe ul {
+  padding-left: 1.1rem;
+  margin-top: 1rem;
+}
+
+.section--cta {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-card {
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 2.75rem;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 36px 80px rgba(20, 33, 61, 0.2);
+  max-width: 640px;
+  width: 100%;
+}
+
+.cta-card h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+.cta-card p {
+  margin-bottom: 1.75rem;
+}
+
+.cta-card .btn {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+.cta-hours {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 600px) {
+  .cta-card {
+    padding: 2.25rem 1.75rem;
+  }
+}
